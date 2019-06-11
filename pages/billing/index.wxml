@@ -1,0 +1,20 @@
+<!--pages/billing/index.wxml-->
+<!-- <text>pages/billing/index.wxml</text> -->
+<view class='container'>
+<view class='number'>
+<text>当前单车编号：{{number}}</text>
+</view>
+<view class='time'>
+<view class='time-title'>
+正在计费
+</view>
+<view class='time-content'>
+<!-- {{hours}}:{{minutes}}:{{seconds}} -->0:0:0
+</view>
+</view>
+<view class='endride'>
+<button type='warn'>结束骑行</button>
+<button type='primary'>回到地图</button>
+</view>
+
+</view>

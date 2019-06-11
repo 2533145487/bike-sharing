@@ -1,0 +1,7 @@
+<!-- page/index/index.html -->
+<view class='container'>
+<map longitude="{{longitude}}" latitude="{{latitude}}" id='ofo-map'scale="16" show-location
+controls='{{controls}}' bindcontroltap='bindcontroltap'>
+</map>
+
+</view>
