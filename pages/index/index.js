@@ -4,8 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    longitude: 113.20,
-    latitude: 36.12
+    longitude:"",
+    latitude:""
   },
   bindcontroltap: function(e) {
     switch (e.controlId) {
@@ -13,6 +13,11 @@ Page({
         this.movetoCenter();
         break;
       case 2:
+      if(this.timer){
+        wx.navigateBack({
+          delta:1
+        })
+      }else{
         wx.scanCode({
           success:()=>{
             wx.showLoading({
@@ -37,9 +42,24 @@ Page({
             })
           },
           fail:()=>{
-
+              wx.showToast({
+                title: '获取密码失败',
+                image:'/images/fail.png'
+              })
           }
         })
+      }
+      break;
+      case 3:
+      wx.navigateTo({
+        url: '../warn/index',
+      })
+      break;
+      case 4:
+    wx.navigateTo({
+      url: '../my/index',
+    })
+    break;
     }
 
   },
@@ -48,6 +68,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    //接收timer
+   
+    this.timer=options.timer
     // var self=this
     wx.getLocation({
         success: (res) => {
@@ -131,6 +154,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    //创建map上下文对象
     this.mapctx = wx.createMapContext("ofo-map");
     this.movetoCenter();
   },

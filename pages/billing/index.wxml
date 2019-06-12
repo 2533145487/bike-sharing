@@ -6,15 +6,15 @@
 </view>
 <view class='time'>
 <view class='time-title'>
-正在计费
+{{actionText}}
 </view>
 <view class='time-content'>
-<!-- {{hours}}:{{minutes}}:{{seconds}} -->0:0:0
+<!-- {{hours}}:{{minutes}}:{{seconds}} -->{{hours}}:{{minutes}}:{{seconds}}
 </view>
 </view>
 <view class='endride'>
-<button type='warn'>结束骑行</button>
-<button type='primary'>回到地图</button>
+<button type='warn' bindtap='endride' disabled="{{clickBtn}}">结束骑行</button>
+<button type='primary'bindtap='toIndex'>回到地图</button>
 </view>
 
 </view>

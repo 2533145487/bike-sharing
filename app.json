@@ -1,16 +1,20 @@
 {
   "pages":[
-    
     "pages/index/index",
-    "pages/scanReasult/index",
+    "pages/my/index",
+    "pages/wallet/index",
+    "pages/charge/index",
+    "pages/warn/index",
     "pages/billing/index",
-    "pages/logs/logs",
+    "pages/scanReasult/index",
+   
     
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#b9dd08",
-    "navigationBarTitleText": "ofo",
+    "navigationBarTitleText": "文杰单车",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

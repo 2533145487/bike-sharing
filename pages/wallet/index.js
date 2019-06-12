@@ -1,33 +1,23 @@
-// pages/scanReasult/index.js
+// pages/wallet/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time:3
-  },
 
+  },
+//充值
+  movetoCharge:function(){
+wx.redirectTo({
+  url: '../charge/index',
+})
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   this.setData({
-     password:options.password
-   })
-    let time = 3;
-    this.timer = setInterval(()=>{
-      this.setData({
-        time:--time
-      });
-      if(time<=0){
-        clearInterval(this.timer)
-        wx.redirectTo({
-          //跳转到计费页面
-          url: '../billing/index?number='+options.number,
-        })
-      }
-    },1000)
+
   },
 
   /**
@@ -41,7 +31,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.getStorage({
+      key: 'overage',
+      success: (res)=>{
+        this.setData({
+          money:res.data
+        })
+      },
+    })
   },
 
   /**

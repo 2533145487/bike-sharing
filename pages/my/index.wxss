@@ -1,0 +1,38 @@
+/* pages/my/index.wxss */
+.container{
+  background-color: #f2f2f2;
+  width: 100%;
+  height:100vh;
+}
+.user-info{
+  padding-top: 60rpx;
+  background-color: #fff;
+}
+.user-info .img image{
+height: 180rpx;
+width:180rpx;
+border-radius: 50%;
+margin: 30rpx auto 40rpx;
+box-shadow: 0 0 20rpx rgba(0, 0, 0, .2);
+display: block
+}
+.user-info .username{
+  padding: 30rpx;
+  text-align: center;
+  display: block;
+}
+.my-wallet{
+  padding: 40rpx;
+  background-color: #fff;
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.btnLogin{
+  width: 90%;
+  position: absolute;
+  bottom: 60rpx;
+  left: 5%;
+}
